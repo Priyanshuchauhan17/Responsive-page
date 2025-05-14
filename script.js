@@ -1,10 +1,8 @@
-//smooth scrolling from locomotive
 const scroll = new LocomotiveScroll({
   el: document.querySelector('#main'), 
   smooth: true
 });
 
-// Mobile Navigation Toggle
 const menuButton = document.getElementById('menu-button');
 const navPart2 = document.getElementById('nav-part2');
 
@@ -14,27 +12,26 @@ menuButton.addEventListener('click', () => {
 });
 
 
-//on hover animation for page 3 elements
 function page3HoverAnimation() {
-  const elemC = document.querySelector("#elem-contanior"); // Selects the container
-  const fixed = document.querySelector("#fixed-img");   // Selects the image display element
+  const elemC = document.querySelector("#elem-contanior"); 
+  const fixed = document.querySelector("#fixed-img");   
 
-  if (fixed && elemC) { // Only proceed if both elements are found
+  if (fixed && elemC) { 
     elemC.addEventListener("mouseenter", function() {
-      fixed.style.display = "block"; // Show the image container
+      fixed.style.display = "block"; 
     });
 
     elemC.addEventListener("mouseleave", function() {
-      fixed.style.display = "none";  // Hide the image container
+      fixed.style.display = "none";  
     });
 
-    const elems = document.querySelectorAll(".elem"); // Select ALL elements with class "elem"
+    const elems = document.querySelectorAll(".elem"); 
 
-    elems.forEach(function(element) { // Loop through each "elem"
+    elems.forEach(function(element) { 
       element.addEventListener("mouseenter", function() {
-        const image = element.getAttribute("data-imge"); // Get image URL from "data-imge"
+        const image = element.getAttribute("data-imge"); 
         if (image) {
-          fixed.style.backgroundImage = `url(${image})`; // Set the background image
+          fixed.style.backgroundImage = `url(${image})`; 
         }
       });
     });
@@ -43,17 +40,15 @@ function page3HoverAnimation() {
   }
 }
 
-// Make sure to call the function
 page3HoverAnimation();
 //swiper js start
-function initializeSwiper() { // Wrapped in a function for clarity
+function initializeSwiper() { 
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 'auto', // Show partial next/prev slides if needed
-    spaceBetween: 20, // Adjusted space
-    // centeredSlides: true, // Re-evaluate if this is needed with slidesPerView: 'auto'
-    loop: true, // Enable continuous loop
+    slidesPerView: 'auto', 
+    spaceBetween: 20, 
+    loop: true, 
     autoplay: {
-      delay: 3000, // Slightly longer delay
+      delay: 3000, 
       disableOnInteraction: false,
     },
     pagination: {
@@ -61,33 +56,25 @@ function initializeSwiper() { // Wrapped in a function for clarity
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next", // Make sure these elements exist in your HTML if you use them
+      nextEl: ".swiper-button-next", 
       prevEl: ".swiper-button-prev",
     },
-    breakpoints: { // Responsive settings for Swiper
-      // when window width is >= 320px
+    breakpoints: { 
       320: {
         slidesPerView: 1,
         spaceBetween: 10
       },
-      // when window width is >= 768px
       768: {
         slidesPerView: 2,
         spaceBetween: 20
       },
-      // when window width is >= 1024px
       1024: {
-        slidesPerView: 3, // Or adjust as per your design
+        slidesPerView: 3, 
         spaceBetween: 30
       }
     }
   });
 }
 
-// Call the functions
 page3HoverAnimation(); 
 initializeSwiper(); 
-
-// Note: The swiperAnimation() function was called but not defined in your original script.
-// If you have it defined elsewhere or it's part of an external library not shown, ensure it's correctly implemented.
-// For the Swiper instance above, initialization is handled by initializeSwiper().

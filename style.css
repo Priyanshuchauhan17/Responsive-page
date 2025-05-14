@@ -218,7 +218,6 @@ font-family: three;
 #page2-bottom{
     height: 80vh;
     width: 100%;
-    /* background-color: #8b8beb; */
     display: flex;
     padding: 4vw;
     align-items: center;
@@ -235,7 +234,6 @@ font-family: three;
 
 #bottom-part2{
     width: 20%;
-    /* background-color: aqua; */
 }
 #bottom-part2 img{
     width: 100%;
@@ -275,7 +273,6 @@ animation: anime34 infinite 4s alternate linear;
     height: 150px;
     width: 100%;
     position: relative;
-    /* background-color: aquamarine; */
     display: flex;
     align-items: center;
     padding: 0 2vw;
@@ -300,9 +297,6 @@ animation: anime34 infinite 4s alternate linear;
 .elem:hover #overlay{
 top: 0;
 }
-/* #elem-contanior{
-    background-color: blue;
-} */
 #fixed-img{
     height: 33vw;
     width: 24vw;
@@ -428,11 +422,9 @@ font-family: two;
     
      }
 
-/* Add at the end of your existing CSS or integrate into the responsive section */
 
-/* Hamburger Menu Button Styles */
 #menu-button {
-    display: none; /* Hidden by default, shown in media query */
+    display: none; 
     cursor: pointer;
     padding: 10px;
 }
@@ -446,7 +438,6 @@ font-family: two;
     transition: all 0.3s ease-in-out;
 }
 
-/* Styles for when the menu is open (add class via JavaScript) */
 #menu-button.open .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -460,100 +451,97 @@ font-family: two;
 }
 
 
-/* Modify existing #nav and #nav-part2 for responsiveness */
 @media (max-width: 768px) {
     #nav {
-      flex-direction: row; /* Keep logo and button on the same line */
-      justify-content: space-between; /* Space between logo and button */
+      flex-direction: row; 
+      justify-content: space-between; 
       align-items: center;
-      padding: 4vw 5vw; /* Adjust padding as needed */
-      position: relative; /* Needed for absolute positioning of nav-part2 */
+      padding: 4vw 5vw;
+      position: relative; 
     }
 
     #nav img {
-      max-width: 150px; /* Adjust logo size for mobile */
+      max-width: 150px; 
     }
   
     #menu-button {
-        display: block; /* Show hamburger button on mobile */
-        z-index: 100; /* Ensure it's above other elements */
+        display: block; 
+        z-index: 100; 
     }
 
     #nav-part2 {
-        display: none; /* Hide by default on mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Position below the nav bar */
+        top: 100%; 
         left: 0;
         width: 100%;
-        background-color: #EFEAE3; /* Or your desired background */
+        background-color: #EFEAE3; 
         padding: 2vw 0;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 99; /* Below the menu button but above other content */
+        z-index: 99; 
     }
 
-    #nav-part2.active { /* This class will be toggled by JavaScript */
+    #nav-part2.active { 
         display: flex;
     }
 
     #nav-part2 h4 {
-      font-size: 16px; /* Adjust font size for mobile nav items */
+      font-size: 16px; 
       padding: 15px 20px;
       width: 100%;
       text-align: center;
-      border: none; /* Remove border for mobile view or style as preferred */
-      border-bottom: 1px solid #ddd; /* Optional: separator for items */
+      border: none; 
+      border-bottom: 1px solid #ddd; 
     }
     #nav-part2 h4:last-child {
         border-bottom: none;
     }
 
     #nav-part2 h4:after {
-        display: none; /* Hide the hover effect on mobile if not desired */
+        display: none; 
     }
     #nav-part2 h4 a:hover{
-        color: #FE320A; /* Example hover color for mobile */
+        color: #FE320A; 
     }
 
-    /* Adjust other styles as needed from your existing @media (max-width: 768px) block */
     #left h3 {
-      font-size: 4.5vw; /* Adjusted for better readability */
+      font-size: 4.5vw; 
       line-height: 6vw;
       width: 90%;
-      text-align: center; /* Center text if #center is column */
-      margin: 0 auto; /* Center block */
+      text-align: center; 
+      margin: 0 auto; 
     }
   
     #center h1 {
-      font-size: 12vw; /* Adjusted for better readability */
+      font-size: 12vw; 
       line-height: 11vw;
       text-align: center;
     }
   
     #center {
-      height: auto; /* Allow height to adjust to content */
+      height: auto; 
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 5vw; /* Increased gap */
+      gap: 5vw; 
       text-align: center;
-      padding-bottom: 8vw; /* Increased padding */
+      padding-bottom: 8vw; 
     }
   
     #page1 video {
-        border-radius: 20px; /* Consistent border-radius */
-        margin-top: 6vw; /* Increased margin */
-    }
+        border-radius: 20px; 
+        margin-top: 6vw;}
 
     #page2-bottom {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 6vw 4vw; /* Adjust padding */
+      padding: 6vw 4vw;
     }
   
     #page2-bottom h1 {
-      font-size: 6vw; /* Adjusted */
+      font-size: 6vw; 
       width: 90%;
     }
   
@@ -563,12 +551,12 @@ font-family: two;
     }
   
     #page2 #guii {
-      height: 50vw; /* Adjusted */
+      height: 50vw; 
       width: 50vw;
-      top: auto; /* Let it flow naturally or adjust */
-      bottom: 5%; /* Example adjustment */
+      top: auto; 
+      bottom: 5%; 
       left: 50%;
-      transform: translateX(-50%); /* Center it */
+      transform: translateX(-50%); 
     }
   
     #box {
@@ -577,51 +565,51 @@ font-family: two;
       height: 111vh;
       top: -4%;
       left: 5%;
-      padding: 4vw; /* Add some padding */
+      padding: 4vw; 
     }
   
     #box img {
       width: 100%;
       height: auto;
       position: relative;
-      border-radius: 15px; /* Consistent border-radius */
-      margin-bottom: 4vw; /* Space below image */
+      border-radius: 15px;
+      margin-bottom: 4vw; 
     }
   
     #details h2 {
-      font-size: 7vw; /* Adjusted */
+      font-size: 7vw; 
       left: 0;
       padding-left: 15px;
-      margin-bottom: 2vw; /* Space below headings */
+      margin-bottom: 2vw; 
     }
   
     #details p {
-      font-size: 3.8vw; /* Adjusted */
+      font-size: 3.8vw; 
       left: 0;
       padding: 0 5vw;
-      line-height: 1.6; /* Improve readability */
+      line-height: 1.6; 
     }
   
     .box3 p {
-      font-size: 3.5vw; /* Adjusted */
-      line-height: 1.5; /* Improve readability */
+      font-size: 3.5vw; 
+      line-height: 1.5; 
     }
   
     #footer h1 {
-      font-size: 18vw; /* Adjusted */
+      font-size: 18vw; 
       text-align: center;
     }
   
     #elem h2 {
-      font-size: 5vw; /* Adjusted */
+      font-size: 5vw; 
     }
   
     #fixed-img {
-      display: none !important; /* Ensure it's hidden */
+      display: none !important; 
     }
   
     #hero-shape, #hero1, #hero2, #hero3 {
-      display: none; /* Ensure these are hidden on mobile */
+      display: none; 
     }
     #page3{
         display: none;
@@ -672,10 +660,10 @@ font-family: two;
     }
 
     #page5 .swiper-slide {
-      padding: 0 3vw; /* Adjust padding */
+      padding: 0 3vw;
     }
   
     .box3 img {
-      height: 50px; /* Adjust image height */
+      height: 50px; 
     }
   }
